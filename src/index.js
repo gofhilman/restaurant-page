@@ -1,4 +1,4 @@
-
+import { leftContent, rightContent, contentNav } from "./home.js";
 import "./fonts/stylesheet.css";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import "./styles.css";
@@ -18,27 +18,50 @@ const restaurantPage = (function (doc) {
         alt: "The restaurant logo",
         width: 150
     });
+    headerTitle.classList.add('restaurant-name');
+    nav.classList.add('marker');
     headerTitle.textContent = "Meater";
 
     function init () {
-        headerDiv.appendChild(headerLogo);
-        headerDiv.appendChild(headerTitle);
+        headerDiv.append(headerLogo, headerTitle);
         header.insertBefore(headerDiv, nav);
     }
 
     function screenController () {
         let navButton = "home";
         const updateScreen = (navButton) => {
-
+            switch (navButton) {
+                case "home":
+                    content.replaceChildren(leftContent, rightContent);
+                    break;
+                case "menu":
+                    content.replaceChildren();
+                    break;
+                case "contacts":
+                    content.replaceChildren();
+            }
         };
-        const handleClick = (event) => {
-
+        const handleHeaderClick = (event) => {
+            navButton = event.target.id;
+            updateScreen(navButton);
         }
-        nav.addEventListener('click', handleClick);
+        const handleContentClick = (event) => {
+            switch (event.target.id) {
+                case "content-menu":
+                    navButton = "menu";
+                    break;
+                case "reserve":
+                    navButton = "contacts";
+            }
+            updateScreen(navButton);
+        }
+        nav.addEventListener('click', handleHeaderClick);
+        contentNav.addEventListener('click', handleContentClick);
         updateScreen(navButton);
     }
 
-    return { init }
+    return { init, screenController }
 })(document);
 
 restaurantPage.init();
+restaurantPage.screenController();
