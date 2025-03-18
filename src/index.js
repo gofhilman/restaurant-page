@@ -1,4 +1,5 @@
 import { leftContent, rightContent, contentNav } from "./home.js";
+import { breakfastContainer, lunchContainer, dinnerContainer } from "./menu.js";
 import "./fonts/stylesheet.css";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import "./styles.css";
@@ -32,12 +33,18 @@ const restaurantPage = (function (doc) {
         const updateScreen = (navButton) => {
             switch (navButton) {
                 case "home":
+                    content.classList.remove(...content.classList);
+                    content.classList.add("home-content");
                     content.replaceChildren(leftContent, rightContent);
                     break;
                 case "menu":
-                    content.replaceChildren();
+                    content.classList.remove(...content.classList);
+                    content.classList.add("menu-content");
+                    content.replaceChildren(breakfastContainer, lunchContainer, dinnerContainer);
                     break;
                 case "contacts":
+                    content.classList.remove(...content.classList);
+                    content.classList.add("contact-content");
                     content.replaceChildren();
             }
         };

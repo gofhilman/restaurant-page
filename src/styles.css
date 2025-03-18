@@ -78,29 +78,33 @@ nav > button:hover {
     font-size: 7rem;
 }
 
-#content {
-    padding: 40px 80px 0 40px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    
-    
-}
-
 h1 {
     font-family: Montserrat, system-ui, -apple-system, 
         BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 5rem;
-    font-weight: 900;
-    margin: 10px 0 25px 0;
-    color: rgb(0, 128, 128);
 }
 
 h2 {
     font-family: Lato, system-ui, -apple-system, 
         BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home-content {
+    padding: 40px 80px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.home-content h1 {  
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 10px 0 25px 0;
+    color: rgb(0, 128, 128);
+}
+
+.home-content h2 {  
     font-size: 4rem;
     color: rgb(106, 90, 205);
 }

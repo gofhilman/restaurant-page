@@ -23,4 +23,4 @@ contentNav.append(contentMenu, reserve);
 leftContent.append(contentHeader, contentSubheader);
 rightContent.append(restaurantName, contentNav);
 
-export { leftContent, rightContent, contentNav }
+export { leftContent, rightContent, contentNav };
