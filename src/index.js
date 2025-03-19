@@ -1,5 +1,6 @@
 import { leftContent, rightContent, contentNav } from "./home.js";
 import { breakfastContainer, lunchContainer, dinnerContainer } from "./menu.js";
+import { contactInfo, openingHours } from "./contacts.js";
 import "./fonts/stylesheet.css";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import "./styles.css";
@@ -59,7 +60,7 @@ const restaurantPage = (function (doc) {
                     reset();
                     contacts.classList.add("current-page");
                     content.classList.add("contact-content");
-                    content.replaceChildren();
+                    content.replaceChildren(contactInfo, openingHours);
             }
         };
         const handleHeaderClick = (event) => {
