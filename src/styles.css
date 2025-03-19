@@ -201,3 +201,8 @@ h2 {
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+.contact-content {
+    margin: 20px;
+    background-color: var(--bg-color);
+}
