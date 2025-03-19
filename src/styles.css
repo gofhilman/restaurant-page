@@ -205,6 +205,34 @@ h2 {
 }
 
 .contact-content {
-    margin: 20px;
+    margin: 30px min(100px, 5%);
+    padding: 0 50px 30px 30px;
     background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-content p {
+    font-size: 5rem;
+    margin-bottom: 20px
+}
+
+.contact-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    gap: 8px 20px;
+}
+
+.detail-grid > h2 {
+    font-size: 1.8rem;
 }
