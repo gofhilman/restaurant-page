@@ -1,5 +1,5 @@
 const leftContent = document.createElement('div');
-const contentHeader = document.createElement('h1');
+const contentHeader = document.createElement('h2');
 const contentSubheader = document.createElement('h2');
 const rightContent = document.createElement('div');
 const restaurantName = document.createElement('p');

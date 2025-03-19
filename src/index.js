@@ -8,6 +8,10 @@ import restaurantLogo from "./meater-logo.png";
 const restaurantPage = (function (doc) {
     const header = doc.querySelector("header");
     const nav = doc.querySelector("nav");
+    const home = doc.querySelector("#home");
+    const menu = doc.querySelector("#menu");
+    const contacts = doc.querySelector("#contacts");
+    const navChoices = [home, menu, contacts];
     const content = doc.querySelector("#content");
 
     const headerDiv = doc.createElement("div");
@@ -28,22 +32,32 @@ const restaurantPage = (function (doc) {
         header.insertBefore(headerDiv, nav);
     }
 
+    function reset () {
+        navChoices.forEach(choice => {
+            choice.classList.remove(...choice.classList);
+        });
+        content.classList.remove(...content.classList);
+    }
+
     function screenController () {
         let navButton = "home";
         const updateScreen = (navButton) => {
             switch (navButton) {
                 case "home":
-                    content.classList.remove(...content.classList);
+                    reset();
+                    home.classList.add("current-page");
                     content.classList.add("home-content");
                     content.replaceChildren(leftContent, rightContent);
                     break;
                 case "menu":
-                    content.classList.remove(...content.classList);
+                    reset();
+                    menu.classList.add("current-page");
                     content.classList.add("menu-content");
                     content.replaceChildren(breakfastContainer, lunchContainer, dinnerContainer);
                     break;
                 case "contacts":
-                    content.classList.remove(...content.classList);
+                    reset();
+                    contacts.classList.add("current-page");
                     content.classList.add("contact-content");
                     content.replaceChildren();
             }
