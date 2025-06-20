@@ -21,8 +21,7 @@ const restaurantPage = (function (doc) {
     
     Object.assign(headerLogo, {
         src: restaurantLogo,
-        alt: "The restaurant logo",
-        width: 150
+        alt: "The restaurant logo"
     });
     headerTitle.classList.add('restaurant-name');
     nav.classList.add('marker');
