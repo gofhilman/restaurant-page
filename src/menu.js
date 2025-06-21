@@ -65,7 +65,6 @@ for (let i = 0; i < 3; i++) {
         Object.assign(foodImage, {
             src: imageSrc[2*i+j],
             alt: imageAlt[2*i+j],
-            width: 400
         });
         const foodName = document.createElement('h1');
         foodName.classList.add('food-name');

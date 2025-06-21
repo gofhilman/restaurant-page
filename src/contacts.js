@@ -17,8 +17,7 @@ for (let i = 0; i < 2; i++) {
     const contactIcon = document.createElement('img');
     Object.assign(contactIcon, {
         src: iconSrc[i],
-        alt: iconAlt[i],
-        width: 50
+        alt: iconAlt[i]
     });
     const contactDetail = document.createElement('h2');
     contactDetail.textContent = contactText[i];
