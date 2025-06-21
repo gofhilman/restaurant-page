@@ -4,7 +4,7 @@ import { contactInfo, openingHours } from "./contacts.js";
 import "./fonts/stylesheet.css";
 import "../node_modules/modern-normalize/modern-normalize.css";
 import "./styles.css";
-import restaurantLogo from "./meater-logo.png";
+import restaurantLogo from "./meater-logo.png?as=webp";
 
 const restaurantPage = (function (doc) {
     const header = doc.querySelector("header");

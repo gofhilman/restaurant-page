@@ -1,9 +1,9 @@
-import breakfastOne from "./breakfast-1.png";
-import breakfastTwo from "./breakfast-2.png";
-import lunchOne from "./lunch-1.png";
-import lunchTwo from "./lunch-2.png";
-import dinnerOne from "./dinner-1.png";
-import dinnerTwo from "./dinner-2.png";
+import breakfastOne from "./breakfast-1.png?as=webp";
+import breakfastTwo from "./breakfast-2.png?as=webp";
+import lunchOne from "./lunch-1.png?as=webp";
+import lunchTwo from "./lunch-2.png?as=webp";
+import dinnerOne from "./dinner-1.png?as=webp";
+import dinnerTwo from "./dinner-2.png?as=webp";
 
 const containers = [];
 
